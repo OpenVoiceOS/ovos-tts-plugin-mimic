@@ -6,6 +6,8 @@ OVOS TTS plugin for [Mimic](https://github.com/MycroftAI/mimic1)
 
 `pip install ovos-tts-plugin-mimic`
 
+you can either [compile](https://github.com/MycroftAI/mycroft-core/blob/dev/scripts/install-mimic.sh) [mimic](https://github.com/MycroftAI/mimic1) or use [forslund's repo](https://forslund.github.io/mycroft-desktop-repo/)
+
 ## Configuration
 
 if mimic is available system wide you just need to specify a voice
