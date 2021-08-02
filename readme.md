@@ -14,8 +14,8 @@ if mimic is available system wide you just need to specify a voice
 
 ```json
   "tts": {
-    "module": "ovos_tts_mimic",
-    "ovos_tts_mimic": {
+    "module": "ovos-tts-plugin-mimic",
+    "ovos-tts-plugin-mimic": {
       "voice": "ap",
     }
   }
@@ -30,8 +30,8 @@ You can also specify the mimic binary location
 
 ```json
   "tts": {
-    "module": "ovos_tts_mimic",
-    "ovos_tts_mimic": {
+    "module": "ovos-tts-plugin-mimic",
+    "ovos-tts-plugin-mimic": {
       "voice": "http://www.festvox.org/flite/packed/flite-2.0/voices/cmu_us_fem.flitevox",
       "binary": "~/mimic1/mimic"
     }
@@ -49,8 +49,8 @@ If you are a subscriber the voice should have been downloaded to `/opt/mycroft/v
 
 ```json
   "tts": {
-    "module": "ovos_tts_mimic",
-    "ovos_tts_mimic": {
+    "module": "ovos-tts-plugin-mimic",
+    "ovos-tts-plugin-mimic": {
       "voice": "trinity",
       "binary": "/opt/mycroft/voices/mimic_tn"
     }

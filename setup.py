@@ -1,18 +1,18 @@
 #!/usr/bin/env python3
 from setuptools import setup
 
-PLUGIN_ENTRY_POINT = 'ovos_tts_mimic = ' \
+PLUGIN_ENTRY_POINT = 'ovos-tts-plugin-mimic = ' \
                      'ovos_tts_plugin_mimic:MimicTTSPlugin'
 setup(
     name='ovos-tts-plugin-mimic',
-    version='0.1',
+    version='0.2.0',
     description='mimic tts plugin for OpenVoiceOS',
     url='https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic',
     author='JarbasAi',
     author_email='jarbasai@mailfence.com',
     license='Apache-2.0',
     packages=['ovos_tts_plugin_mimic'],
-    install_requires=["ovos-plugin-manager", "pyxdg"],
+    install_requires=["ovos-plugin-manager>=0.0.1a7", "pyxdg"],
     zip_safe=True,
     classifiers=[
         'Development Status :: 3 - Alpha',
