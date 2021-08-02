@@ -5,7 +5,7 @@ PLUGIN_ENTRY_POINT = 'ovos-tts-plugin-mimic = ' \
                      'ovos_tts_plugin_mimic:MimicTTSPlugin'
 setup(
     name='ovos-tts-plugin-mimic',
-    version='0.2.0',
+    version='0.2.1',
     description='mimic tts plugin for OpenVoiceOS',
     url='https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic',
     author='JarbasAi',
