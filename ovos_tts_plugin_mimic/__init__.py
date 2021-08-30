@@ -132,10 +132,6 @@ class MimicTTSValidator(TTSValidator):
     def __init__(self, tts):
         super(MimicTTSValidator, self).__init__(tts)
 
-    def validate_lang(self):
-        lang = self.tts.lang.lower()
-        assert lang in self.get_lang_list()
-
     def validate_voice(self):
         if self.tts.voice is not None and \
                 not self.tts.voice.startswith("http") and \
