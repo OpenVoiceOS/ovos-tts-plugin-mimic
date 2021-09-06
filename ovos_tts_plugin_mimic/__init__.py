@@ -92,7 +92,7 @@ class MimicTTSPlugin(TTS):
             [expanduser(self.mimic_bin), '-lv']).\
             decode("utf-8").split(":")[-1].strip().split(" ")
 
-    def get_tts(self, sentence, wav_file):
+    def get_tts(self, sentence, wav_file, lang=None):
         """Generate WAV and phonemes.
 
         Arguments:
