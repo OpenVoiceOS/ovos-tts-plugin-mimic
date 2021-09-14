@@ -47,13 +47,16 @@ class MimicTTSPlugin(TTS):
             return xdg_mimic
 
         # mycroft style data_dir
-        config = read_mycroft_config() or {}
-        if config.get("data_dir"):
-            data_dir = expanduser(config['data_dir'])
-            mimic_bin = join(data_dir, 'voices', 'mimic_tn')
-            if isfile(mimic_bin):
-                return mimic_bin
-
+        try:
+            config = read_mycroft_config() or {}
+            if config.get("data_dir"):
+                data_dir = expanduser(config['data_dir'])
+                mimic_bin = join(data_dir, 'voices', 'mimic_tn')
+                if isfile(mimic_bin):
+                    return mimic_bin
+        except: # not running mycroft-core -> no default config
+            pass
+        
         # mycroft default location
         mimic_bin = "/opt/mycroft/voices/mimic_tn"
         if isfile(mimic_bin):
