@@ -18,7 +18,7 @@ from ovos_plugin_manager.templates.tts import TTS, TTSValidator
 from ovos_utils.configuration import get_xdg_base
 from ovos_utils.configuration import read_mycroft_config
 from ovos_utils.lang.visimes import VISIMES
-from xdg import BaseDirectory as XDG
+from ovos_utils.xdg_utils import xdg_config_home
 
 
 class MimicTTSPlugin(TTS):
@@ -35,13 +35,13 @@ class MimicTTSPlugin(TTS):
     @staticmethod
     def find_premium_mimic():
         # HolmesV style
-        xdg_mimic = join(XDG.xdg_config_home, get_xdg_base(),
+        xdg_mimic = join(xdg_config_home(), get_xdg_base(),
                          'voices', 'mimic_tn')
         if isfile(xdg_mimic):
             return xdg_mimic
 
         # HolmesV style default / once mycroft finally migrates to xdg
-        xdg_mimic = join(XDG.xdg_config_home, "mycroft",
+        xdg_mimic = join(xdg_config_home(), "mycroft",
                          'voices', 'mimic_tn')
         if isfile(xdg_mimic):
             return xdg_mimic

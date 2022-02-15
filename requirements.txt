@@ -1,2 +1,2 @@
 ovos-plugin-manager>=0.0.1a12
-pyxdg
+ovos-utils~=0.0.14a7
