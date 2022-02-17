@@ -15,7 +15,7 @@ RUN curl https://forslund.github.io/mycroft-desktop-repo/mycroft-desktop.gpg.key
 
 RUN pip3 install ovos-utils==0.0.15
 RUN pip3 install ovos-plugin-manager==0.0.4
-RUN pip3 install ovos-tts-server==0.0.1
+RUN pip3 install ovos-tts-server==0.0.2
 
 COPY . /tmp/ovos-tts-plugin-mimic
 RUN pip3 install /tmp/ovos-tts-plugin-mimic
