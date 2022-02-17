@@ -95,17 +95,20 @@ class MimicTTSPlugin(TTS):
             [expanduser(self.mimic_bin), '-lv']).\
             decode("utf-8").split(":")[-1].strip().split(" ")
 
-    def get_tts(self, sentence, wav_file, lang=None):
+    def get_tts(self, sentence, wav_file, lang=None, voice=None):
         """Generate WAV and phonemes.
 
         Arguments:
             sentence (str): sentence to generate audio for
             wav_file (str): output file
+            lang (str): optional lang override
+            voice (str): optional voice override
 
         Returns:
             tuple ((str) file location, (str) generated phonemes)
         """
-        args = [expanduser(self.mimic_bin), '-voice', self.voice,
+        voice = voice or self.voice or "ap"
+        args = [expanduser(self.mimic_bin), '-voice', voice,
                 '-psdur', '-ssml']
 
         stretch = self.config.get('duration_stretch', None)
