@@ -1,4 +1,4 @@
-name: Publish Nancy Voice Container
+name: Publish Mimic Container
 on:
   workflow_dispatch:
 
