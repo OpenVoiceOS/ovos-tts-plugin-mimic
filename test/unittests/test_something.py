@@ -1,24 +1,26 @@
 # write your first unittest!
 import unittest
 
-from ovos_tts_plugin_mimic import mimicTTSPlugin
+from ovos_tts_plugin_mimic import MimicTTSPlugin
 
 
 class TestTTS(unittest.TestCase):
     @classmethod
     def setUpClass(self):
-        self.mimic = mimicTTSPlugin()
+        self.mimic = MimicTTSPlugin()
 
     def test_something(self):
-        path = "/tmp/hello_kusal.wav"
+        path = "/tmp/hello_ap.wav"
         audio, phonemes = self.mimic.get_tts("hello world", path)
         self.assertEqual(audio, path)
         self.assertEqual(phonemes,
-                         [['HH', '0.0775'],
-                          ['AH', '0.1550'],
-                          ['L', '0.2325'],
-                          ['OW', '0.3100'],
-                          ['W', '0.4340'],
-                          ['ER', '0.5580'],
-                          ['L', '0.6820'],
-                          ['D', '0.8060']])
+                         [['pau', '0.137'],
+                          ['hh', '0.236'],
+                          ['ax', '0.286'],
+                          ['l', '0.375'],
+                          ['ow', '0.513'],
+                          ['w', '0.673'],
+                          ['er', '0.760'],
+                          ['l', '0.946'],
+                          ['d', '1.050'],
+                          ['pau', '1.230']])
