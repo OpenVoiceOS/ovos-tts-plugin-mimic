@@ -27,7 +27,7 @@ class MimicTTSPlugin(TTS):
     def __init__(self, lang="en-us", config=None):
         super(MimicTTSPlugin, self).__init__(lang, config,
                                              MimicTTSValidator(self), 'wav')
-        self.mimic_bin = config.get("binary") or \
+        self.mimic_bin = self.config.get("binary") or \
                          self.find_premium_mimic() or \
                          find_executable("mimic")
         self.voice = self.voice or "ap"
