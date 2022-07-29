@@ -50,8 +50,9 @@ def required(requirements_file):
                 if pkg.strip() and not pkg.startswith("#")]
 
 
-PLUGIN_ENTRY_POINT = 'ovos-tts-plugin-mimic = ' \
-                     'ovos_tts_plugin_mimic:MimicTTSPlugin'
+PLUGIN_ENTRY_POINT = 'ovos-tts-plugin-mimic = ovos_tts_plugin_mimic:MimicTTSPlugin'
+SAMPLE_CONFIGS = 'ovos-tts-plugin-mimic.config = ovos_tts_plugin_mimic:MimicTTSPluginConfig'
+
 setup(
     name='ovos-tts-plugin-mimic',
     version='0.2.6',
@@ -81,5 +82,6 @@ setup(
         'Programming Language :: Python :: 3.6',
     ],
     keywords='mycroft plugin tts OVOS OpenVoiceOS',
-    entry_points={'mycroft.plugin.tts': PLUGIN_ENTRY_POINT}
+    entry_points={'mycroft.plugin.tts': PLUGIN_ENTRY_POINT,
+                  'mycroft.plugin.tts.config': SAMPLE_CONFIGS}
 )

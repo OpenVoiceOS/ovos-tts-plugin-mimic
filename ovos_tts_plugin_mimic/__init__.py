@@ -153,3 +153,21 @@ class MimicTTSValidator(TTSValidator):
     @staticmethod
     def get_lang_list():
         return []
+
+
+MimicTTSPluginConfig = {
+    "en-us": [
+        {"voice": "ap", "gender": "male"},
+        {"voice": "slt", "gender": "female"},
+        {"voice": "kal", "gender": "male"},
+        {"voice": "awb", "gender": "male"},
+        {"voice": "rms", "gender": "male"}
+    ]
+}
+
+if MimicTTSPlugin.find_premium_mimic():
+    MimicTTSPluginConfig["en-us"].append(
+        {"voice": "trinity", "gender": "female"}
+    )
+
+
