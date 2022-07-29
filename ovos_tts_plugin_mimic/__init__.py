@@ -54,9 +54,9 @@ class MimicTTSPlugin(TTS):
                 mimic_bin = join(data_dir, 'voices', 'mimic_tn')
                 if isfile(mimic_bin):
                     return mimic_bin
-        except: # not running mycroft-core -> no default config
+        except:  # not running mycroft-core -> no default config
             pass
-        
+
         # mycroft default location
         mimic_bin = "/opt/mycroft/voices/mimic_tn"
         if isfile(mimic_bin):
@@ -92,7 +92,7 @@ class MimicTTSPlugin(TTS):
 
     def get_builtin_voices(self):
         return subprocess.check_output(
-            [expanduser(self.mimic_bin), '-lv']).\
+            [expanduser(self.mimic_bin), '-lv']). \
             decode("utf-8").split(":")[-1].strip().split(" ")
 
     def get_tts(self, sentence, wav_file, lang=None, voice=None):
@@ -156,8 +156,10 @@ class MimicTTSValidator(TTSValidator):
 
 
 MimicTTSPluginConfig = {
+    "en-uk": [
+        {"voice": "ap", "gender": "male"}
+    ],
     "en-us": [
-        {"voice": "ap", "gender": "male"},
         {"voice": "slt", "gender": "female"},
         {"voice": "kal", "gender": "male"},
         {"voice": "awb", "gender": "male"},
@@ -169,5 +171,3 @@ if MimicTTSPlugin.find_premium_mimic():
     MimicTTSPluginConfig["en-us"].append(
         {"voice": "trinity", "gender": "female"}
     )
-
-
