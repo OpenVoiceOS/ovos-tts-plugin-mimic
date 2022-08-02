@@ -14,6 +14,7 @@
 
 **Merged pull requests:**
 
+- add "offline" metadata key [\#7](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/pull/7) ([NeonJarbas](https://github.com/NeonJarbas))
 - feat/sample\_configs [\#4](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/pull/4) ([NeonJarbas](https://github.com/NeonJarbas))
 
 ## [V0.2.6](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/tree/V0.2.6) (2022-02-28)
