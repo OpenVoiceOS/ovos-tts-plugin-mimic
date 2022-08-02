@@ -133,6 +133,16 @@ class MimicTTSPlugin(TTS):
             visemes.append((VISIMES.get(phon, '4'), float(dur)))
         return visemes
 
+    @property
+    def available_languages(self) -> set:
+        """Return languages supported by this TTS implementation in this state
+        This property should be overridden by the derived class to advertise
+        what languages that engine supports.
+        Returns:
+            set: supported languages
+        """
+        return set(MimicTTSPluginConfig.keys())
+
 
 class MimicTTSValidator(TTSValidator):
     def __init__(self, tts):
@@ -150,24 +160,20 @@ class MimicTTSValidator(TTSValidator):
     def get_tts_class(self):
         return MimicTTSPlugin
 
-    @staticmethod
-    def get_lang_list():
-        return []
-
 
 MimicTTSPluginConfig = {
-    "en-uk": [
-        {"voice": "ap", "gender": "male"}
+    "en-gb": [
+        {"voice": "ap", "gender": "male", "display_name": "Alan Pope"}
     ],
     "en-us": [
-        {"voice": "slt", "gender": "female"},
-        {"voice": "kal", "gender": "male"},
-        {"voice": "awb", "gender": "male"},
-        {"voice": "rms", "gender": "male"}
+        {"voice": "slt", "gender": "female", "display_name": "slt"},
+        {"voice": "kal", "gender": "male", "display_name": "kal"},
+        {"voice": "awb", "gender": "male", "display_name": "awb"},
+        {"voice": "rms", "gender": "male", "display_name": "rms"}
     ]
 }
 
 if MimicTTSPlugin.find_premium_mimic():
     MimicTTSPluginConfig["en-us"].append(
-        {"voice": "trinity", "gender": "female"}
+        {"voice": "trinity", "gender": "female", "display_name": "Trinity"}
     )
