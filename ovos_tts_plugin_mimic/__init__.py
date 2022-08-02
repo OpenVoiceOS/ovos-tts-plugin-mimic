@@ -163,17 +163,17 @@ class MimicTTSValidator(TTSValidator):
 
 MimicTTSPluginConfig = {
     "en-gb": [
-        {"voice": "ap", "gender": "male", "display_name": "Alan Pope"}
+        {"voice": "ap", "gender": "male", "display_name": "Alan Pope", "offline": True}
     ],
     "en-us": [
-        {"voice": "slt", "gender": "female", "display_name": "slt"},
-        {"voice": "kal", "gender": "male", "display_name": "kal"},
-        {"voice": "awb", "gender": "male", "display_name": "awb"},
-        {"voice": "rms", "gender": "male", "display_name": "rms"}
+        {"voice": "slt", "gender": "female", "display_name": "slt", "offline": True},
+        {"voice": "kal", "gender": "male", "display_name": "kal", "offline": True},
+        {"voice": "awb", "gender": "male", "display_name": "awb", "offline": True},
+        {"voice": "rms", "gender": "male", "display_name": "rms", "offline": True}
     ]
 }
 
 if MimicTTSPlugin.find_premium_mimic():
     MimicTTSPluginConfig["en-us"].append(
-        {"voice": "trinity", "gender": "female", "display_name": "Trinity"}
+        {"voice": "trinity", "gender": "female", "display_name": "Trinity", "offline": True}
     )
