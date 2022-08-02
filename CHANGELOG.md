@@ -4,6 +4,10 @@
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/compare/V0.2.6...HEAD)
 
+**Implemented enhancements:**
+
+- Feat/available langs [\#6](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/pull/6) ([NeonJarbas](https://github.com/NeonJarbas))
+
 **Fixed bugs:**
 
 - en-uk vs en-us [\#5](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/pull/5) ([NeonJarbas](https://github.com/NeonJarbas))
