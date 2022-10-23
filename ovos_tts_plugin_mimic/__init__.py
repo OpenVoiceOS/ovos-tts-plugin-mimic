@@ -163,17 +163,17 @@ class MimicTTSValidator(TTSValidator):
 
 MimicTTSPluginConfig = {
     "en-gb": [
-        {"voice": "ap", "gender": "male", "display_name": "Alan Pope", "offline": True, "priority": 50}
+        {"voice": "ap", "meta": {"gender": "male", "display_name": "Alan Pope", "offline": True, "priority": 50}}
     ],
     "en-us": [
-        {"voice": "slt", "gender": "female", "display_name": "slt", "offline": True, "priority": 70},
-        {"voice": "kal", "gender": "male", "display_name": "kal", "offline": True, "priority": 70},
-        {"voice": "awb", "gender": "male", "display_name": "awb", "offline": True, "priority": 70},
-        {"voice": "rms", "gender": "male", "display_name": "rms", "offline": True, "priority": 70}
+        {"voice": "slt", "meta": {"gender": "female", "display_name": "slt", "offline": True, "priority": 70}},
+        {"voice": "kal", "meta": {"gender": "male", "display_name": "kal", "offline": True, "priority": 70}},
+        {"voice": "awb", "meta": {"gender": "male", "display_name": "awb", "offline": True, "priority": 70}},
+        {"voice": "rms", "meta": {"gender": "male", "display_name": "rms", "offline": True, "priority": 70}}
     ]
 }
 
 if MimicTTSPlugin.find_premium_mimic():
     MimicTTSPluginConfig["en-us"].append(
-        {"voice": "trinity", "gender": "female", "display_name": "Trinity", "offline": True, "priority": 50}
+        {"voice": "trinity", "meta": {"gender": "female", "display_name": "Trinity", "offline": True, "priority": 50}}
     )
