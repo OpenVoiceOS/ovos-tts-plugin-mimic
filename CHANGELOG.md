@@ -6,6 +6,7 @@
 
 **Implemented enhancements:**
 
+- move ui data to "meta" [\#8](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/pull/8) ([JarbasAl](https://github.com/JarbasAl))
 - Feat/available langs [\#6](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/pull/6) ([NeonJarbas](https://github.com/NeonJarbas))
 
 **Fixed bugs:**
