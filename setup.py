@@ -55,7 +55,7 @@ SAMPLE_CONFIGS = 'ovos-tts-plugin-mimic.config = ovos_tts_plugin_mimic:MimicTTSP
 
 setup(
     name='ovos-tts-plugin-mimic',
-    version='0.2.6',
+    version=get_version(),
     description='mimic tts plugin for OpenVoiceOS',
     url='https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic',
     author='JarbasAi',
