@@ -2,12 +2,13 @@
 
 ## [Unreleased](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/tree/HEAD)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/compare/V0.2.6...HEAD)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/compare/c26bbdcb6ac134e2b60de7870716f6130ee01389...HEAD)
 
 **Implemented enhancements:**
 
 - move ui data to "meta" [\#8](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/pull/8) ([JarbasAl](https://github.com/JarbasAl))
 - Feat/available langs [\#6](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/pull/6) ([NeonJarbas](https://github.com/NeonJarbas))
+- Feat/workflows [\#3](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/pull/3) ([JarbasAl](https://github.com/JarbasAl))
 
 **Fixed bugs:**
 
@@ -17,21 +18,6 @@
 
 - add "offline" metadata key [\#7](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/pull/7) ([NeonJarbas](https://github.com/NeonJarbas))
 - feat/sample\_configs [\#4](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/pull/4) ([NeonJarbas](https://github.com/NeonJarbas))
-
-## [V0.2.6](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/tree/V0.2.6) (2022-02-28)
-
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/compare/0.2.6...V0.2.6)
-
-**Implemented enhancements:**
-
-- Feat/workflows [\#3](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/pull/3) ([JarbasAl](https://github.com/JarbasAl))
-
-## [0.2.6](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/tree/0.2.6) (2022-02-17)
-
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/compare/c26bbdcb6ac134e2b60de7870716f6130ee01389...0.2.6)
-
-**Merged pull requests:**
-
 - Added lang=None to get\_tts for compatibility [\#1](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/pull/1) ([Joanguitar](https://github.com/Joanguitar))
 
 
