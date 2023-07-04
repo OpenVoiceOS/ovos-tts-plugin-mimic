@@ -1,5 +1,17 @@
 # Changelog
 
+## [Unreleased](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/tree/HEAD)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/compare/V0.2.8...HEAD)
+
+**Implemented enhancements:**
+
+- feat/g2p [\#9](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/pull/9) ([JarbasAl](https://github.com/JarbasAl))
+
+## [V0.2.8](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/tree/V0.2.8) (2023-04-24)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/compare/V0.2.8a2...V0.2.8)
+
 ## [V0.2.8a2](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/tree/V0.2.8a2) (2023-04-24)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/compare/c26bbdcb6ac134e2b60de7870716f6130ee01389...V0.2.8a2)
