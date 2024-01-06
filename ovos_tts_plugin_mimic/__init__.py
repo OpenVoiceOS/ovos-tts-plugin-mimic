@@ -15,8 +15,8 @@ from distutils.spawn import find_executable
 from os.path import join, isfile, expanduser
 from ovos_plugin_manager.templates.g2p import Grapheme2PhonemePlugin, OutOfVocabulary
 from ovos_plugin_manager.templates.tts import TTS, TTSValidator
-from ovos_utils.configuration import get_xdg_base
-from ovos_utils.configuration import read_mycroft_config
+from ovos_config.meta import get_xdg_base
+from ovos_config.config import read_mycroft_config
 from ovos_utils.lang.visimes import VISIMES
 from ovos_utils.xdg_utils import xdg_config_home
 
