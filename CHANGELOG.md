@@ -2,7 +2,19 @@
 
 ## [Unreleased](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/tree/HEAD)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/compare/V0.2.9a1...HEAD)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/compare/V0.2.9a2...HEAD)
+
+**Implemented enhancements:**
+
+- Create phonetic\_spellings.txt [\#12](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/pull/12) ([JarbasAl](https://github.com/JarbasAl))
+
+**Closed issues:**
+
+- g2p plugin not working [\#10](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/issues/10)
+
+## [V0.2.9a2](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/tree/V0.2.9a2) (2024-01-06)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/compare/V0.2.9a1...V0.2.9a2)
 
 **Fixed bugs:**
 
