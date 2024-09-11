@@ -51,6 +51,7 @@ def required(requirements_file):
 
 
 PLUGIN_ENTRY_POINT = 'ovos-tts-plugin-mimic = ovos_tts_plugin_mimic:MimicTTSPlugin'
+G2P_ENTRY_POINT = 'ovos-g2p-plugin-mimic = ovos_tts_plugin_mimic:MimicPhonemesPlugin'
 SAMPLE_CONFIGS = 'ovos-tts-plugin-mimic.config = ovos_tts_plugin_mimic:MimicTTSPluginConfig'
 
 setup(
@@ -83,5 +84,6 @@ setup(
     ],
     keywords='mycroft plugin tts OVOS OpenVoiceOS',
     entry_points={'mycroft.plugin.tts': PLUGIN_ENTRY_POINT,
-                  'mycroft.plugin.tts.config': SAMPLE_CONFIGS}
+                  'mycroft.plugin.tts.config': SAMPLE_CONFIGS,
+                  'ovos.plugin.g2p': G2P_ENTRY_POINT}
 )
