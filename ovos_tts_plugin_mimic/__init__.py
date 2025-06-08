@@ -10,13 +10,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+from os.path import join, isfile, expanduser
+
 import subprocess
 from distutils.spawn import find_executable
-from os.path import join, isfile, expanduser
+from ovos_config.config import read_mycroft_config
+from ovos_config.meta import get_xdg_base
 from ovos_plugin_manager.templates.g2p import Grapheme2PhonemePlugin, OutOfVocabulary
 from ovos_plugin_manager.templates.tts import TTS, TTSValidator
-from ovos_config.meta import get_xdg_base
-from ovos_config.config import read_mycroft_config
+from ovos_utils import classproperty
 from ovos_utils.lang.visimes import VISIMES
 from ovos_utils.xdg_utils import xdg_config_home
 
@@ -65,8 +67,8 @@ class MimicPhonemesPlugin(Grapheme2PhonemePlugin):
         phonemes = self.get_mimic_phonemes(utterance, normalize=False)
         return [(VISIMES.get(pho[0], '4'), float(pho[1])) for pho in phonemes]
 
-    @property
-    def available_languages(self):
+    @classproperty
+    def available_languages(cls):
         """Return languages supported by this G2P implementation in this state
         This property should be overridden by the derived class to advertise
         what languages that engine supports.
@@ -79,9 +81,10 @@ class MimicPhonemesPlugin(Grapheme2PhonemePlugin):
 class MimicTTSPlugin(TTS):
     """Interface to Mimic TTS."""
 
-    def __init__(self, lang="en-us", config=None):
-        super(MimicTTSPlugin, self).__init__(lang, config,
-                                             MimicTTSValidator(self), 'wav')
+    def __init__(self, config=None):
+        super(MimicTTSPlugin, self).__init__(config=config,
+                                             validator=MimicTTSValidator(self),
+                                             audio_ext='wav')
         self.mimic_bin = self.config.get("binary") or \
                          self.find_premium_mimic() or \
                          find_executable("mimic")
@@ -188,8 +191,8 @@ class MimicTTSPlugin(TTS):
             visemes.append((VISIMES.get(phon, '4'), float(dur)))
         return visemes
 
-    @property
-    def available_languages(self) -> set:
+    @classproperty
+    def available_languages(cls) -> set:
         """Return languages supported by this TTS implementation in this state
         This property should be overridden by the derived class to advertise
         what languages that engine supports.
