@@ -1,40 +1,16 @@
 # Changelog
 
-## [0.2.9a4](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/tree/0.2.9a4) (2024-09-11)
+## [0.3.1a1](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/tree/0.3.1a1) (2025-06-08)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/compare/V0.2.9a3...0.2.9a4)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/compare/V0.3.0...0.3.1a1)
 
 **Merged pull requests:**
 
-- feat:semver [\#13](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/pull/13) ([JarbasAl](https://github.com/JarbasAl))
+- fix: compatibility with ovos-plugin-manager 1.X.X [\#16](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/pull/16) ([JarbasAl](https://github.com/JarbasAl))
 
-## [V0.2.9a3](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/tree/V0.2.9a3) (2024-04-26)
+## [V0.3.0](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/tree/V0.3.0) (2024-09-11)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/compare/V0.2.9a2...V0.2.9a3)
-
-**Implemented enhancements:**
-
-- Create phonetic\_spellings.txt [\#12](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/pull/12) ([JarbasAl](https://github.com/JarbasAl))
-
-**Closed issues:**
-
-- g2p plugin not working [\#10](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/issues/10)
-
-## [V0.2.9a2](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/tree/V0.2.9a2) (2024-01-06)
-
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/compare/V0.2.9a1...V0.2.9a2)
-
-**Fixed bugs:**
-
-- fixes config deprecation warning [\#11](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/pull/11) ([builderjer](https://github.com/builderjer))
-
-## [V0.2.9a1](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/tree/V0.2.9a1) (2023-07-04)
-
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/compare/V0.2.8...V0.2.9a1)
-
-**Implemented enhancements:**
-
-- feat/g2p [\#9](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/pull/9) ([JarbasAl](https://github.com/JarbasAl))
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/compare/0.3.0...V0.3.0)
 
 
 
