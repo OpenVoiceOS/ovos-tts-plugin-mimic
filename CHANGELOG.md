@@ -1,16 +1,12 @@
 # Changelog
 
-## [0.3.1a1](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/tree/0.3.1a1) (2025-06-08)
+## [0.3.2a1](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/tree/0.3.2a1) (2025-12-18)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/compare/V0.3.0...0.3.1a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/compare/0.3.1...0.3.2a1)
 
 **Merged pull requests:**
 
-- fix: compatibility with ovos-plugin-manager 1.X.X [\#16](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/pull/16) ([JarbasAl](https://github.com/JarbasAl))
-
-## [V0.3.0](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/tree/V0.3.0) (2024-09-11)
-
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/compare/0.3.0...V0.3.0)
+- chore: Configure Renovate [\#18](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/pull/18) ([renovate[bot]](https://github.com/apps/renovate))
 
 
 
