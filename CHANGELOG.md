@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.2a3](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/tree/0.3.2a3) (2025-12-20)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/compare/0.3.2a2...0.3.2a3)
+
+**Merged pull requests:**
+
+- chore\(deps\): update dependency ovos-plugin-manager to v2 [\#25](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/pull/25) ([renovate[bot]](https://github.com/apps/renovate))
+
 ## [0.3.2a2](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/tree/0.3.2a2) (2025-12-19)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/compare/0.3.2a1...0.3.2a2)
