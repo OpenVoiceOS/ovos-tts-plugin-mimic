@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.3a1](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/tree/0.3.3a1) (2026-04-03)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/compare/0.3.2a3...0.3.3a1)
+
+**Merged pull requests:**
+
+- fix\(i18n\): normalize locale folders to canonical BCP-47 [\#28](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/pull/28) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.3.2a3](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/tree/0.3.2a3) (2025-12-20)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/compare/0.3.2a2...0.3.2a3)
