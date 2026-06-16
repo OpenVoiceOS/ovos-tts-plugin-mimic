@@ -1,0 +1,42 @@
+name: Run UnitTests
+on:
+  pull_request:
+    branches: [dev, master, main]
+  workflow_dispatch:
+
+jobs:
+  unit_tests:
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11", "3.12", "3.13", "3.14"]
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v6
+      - name: Set up python ${{ matrix.python-version }}
+        uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install System Dependencies
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -yq python3-dev libssl-dev curl
+          python -m pip install --upgrade pip
+          python -m pip install build wheel
+      - name: Install Mimic
+        # The `mimic` TTS binary is required by the unit tests (they instantiate
+        # MimicTTSPlugin and call get_tts, which runs the mimic subprocess). It is
+        # not packaged in the Ubuntu repos, so install the .deb directly from the
+        # mycroft-desktop repo (apt-get resolves its deps against the runner repos).
+        run: |
+          curl -fsSL -o /tmp/mimic.deb \
+            "https://forslund.github.io/mycroft-desktop-repo/pool/main/m/mimic/mimic_1.3.0.0_amd64.deb"
+          sudo apt-get install -yq /tmp/mimic.deb
+          command -v mimic
+      - name: Install package with test extras
+        run: |
+          pip install .[test]
+      - name: Run unittests
+        run: |
+          pytest test/unittests -v
