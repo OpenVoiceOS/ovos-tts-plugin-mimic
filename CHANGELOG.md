@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.3a2](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/tree/0.3.3a2) (2026-06-16)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/compare/0.3.3a1...0.3.3a2)
+
+**Merged pull requests:**
+
+- chore: add missing shared CI workflows [\#30](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/pull/30) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.3.3a1](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/tree/0.3.3a1) (2026-04-03)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/compare/0.3.2a3...0.3.3a1)
