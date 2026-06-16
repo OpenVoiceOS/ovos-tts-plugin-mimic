@@ -1,0 +1,17 @@
+name: Build Tests
+
+on:
+  pull_request:
+    branches: [dev, master, main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    uses: OpenVoiceOS/gh-automations/.github/workflows/build-tests.yml@dev
+    secrets: inherit
+    with:
+      python_versions: '["3.10", "3.11", "3.12", "3.13", "3.14"]'
+      install_extras: ''
+      # build/install verification only. The mimic unit tests need the `mimic`
+      # binary, which is not an apt package (it is a .deb from the
+      # mycroft-desktop repo), so they run in the dedicated unit_tests workflow.

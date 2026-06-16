@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ovos-tts-plugin-mimic"
+dynamic = ["version"]
+description = "mimic tts plugin for OpenVoiceOS"
+license = {text = "Apache-2.0"}
+authors = [
+    {name = "JarbasAi", email = "jarbasai@mailfence.com"}
+]
+keywords = ["mycroft", "plugin", "tts", "OVOS", "OpenVoiceOS"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Topic :: Text Processing :: Linguistic",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+]
+dependencies = [
+    "ovos-plugin-manager>=2.1.0,<3.0.0",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+]
+
+[project.urls]
+Homepage = "https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic"
+
+[project.entry-points."opm.tts"]
+"ovos-tts-plugin-mimic" = "ovos_tts_plugin_mimic:MimicTTSPlugin"
+
+[project.entry-points."opm.tts.config"]
+"ovos-tts-plugin-mimic.config" = "ovos_tts_plugin_mimic:MimicTTSPluginConfig"
+
+[project.entry-points."opm.g2p"]
+"ovos-g2p-plugin-mimic" = "ovos_tts_plugin_mimic:MimicPhonemesPlugin"
+
+[tool.setuptools.dynamic]
+version = {attr = "ovos_tts_plugin_mimic.version.__version__"}
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["ovos_tts_plugin_mimic*"]
+
+[tool.setuptools.package-data]
+ovos_tts_plugin_mimic = [
+    "locale/**/*",
+]
