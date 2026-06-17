@@ -165,7 +165,11 @@ class MimicTTSPlugin(TTS):
         Returns:
             tuple ((str) file location, (str) generated phonemes)
         """
-        voice = voice or self.voice or "ap"
+        voice = voice or self.voice
+        # the TTS base defaults voice to the literal "default", which mimic does
+        # not ship; fall back to the bundled US-English "ap" voice
+        if not voice or voice == "default":
+            voice = "ap"
         args = [expanduser(self.mimic_bin), '-voice', voice,
                 '-psdur', '-ssml']
 
