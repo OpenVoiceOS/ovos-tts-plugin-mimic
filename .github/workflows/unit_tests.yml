@@ -1,9 +1,7 @@
 name: Run UnitTests
 on:
-  push:
-    branches: [master]
   pull_request:
-    branches: [dev]
+    branches: [dev, master, main]
   workflow_dispatch:
 
 jobs:
@@ -23,7 +21,7 @@ jobs:
       - name: Install System Dependencies
         run: |
           sudo apt-get update -q
-          sudo apt-get install -yq python3-dev libssl-dev portaudio19-dev libpulse-dev curl
+          sudo apt-get install -yq python3-dev libssl-dev curl
           python -m pip install --upgrade pip
           python -m pip install build wheel
       - name: Install Mimic
@@ -35,16 +33,10 @@ jobs:
           curl -fsSL -o /tmp/mimic.deb \
             "https://forslund.github.io/mycroft-desktop-repo/pool/main/m/mimic/mimic_1.3.0.0_amd64.deb"
           sudo apt-get install -yq /tmp/mimic.deb
-          # mimic exits non-zero on --version; just confirm it is on PATH
           command -v mimic
-      - name: Install core repo with test extras
+      - name: Install package with test extras
         run: |
           pip install .[test]
-          pip install pytest-cov
       - name: Run unittests
         run: |
-          pytest --cov=ovos_tts_plugin_mimic --cov-report xml test/unittests
-      - name: Upload coverage
-        env:
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
-        uses: codecov/codecov-action@v5
+          pytest test/unittests -v
