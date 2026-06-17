@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.3a3](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/tree/0.3.3a3) (2026-06-17)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/compare/0.3.3a2...0.3.3a3)
+
+**Merged pull requests:**
+
+- test: add TTS intelligibility e2e \(ovoscope\) [\#31](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/pull/31) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.3.3a2](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/tree/0.3.3a2) (2026-06-16)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/compare/0.3.3a1...0.3.3a2)
