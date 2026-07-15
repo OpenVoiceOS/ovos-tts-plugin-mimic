@@ -8,7 +8,7 @@
 FROM python:3.11-slim AS mimic-builder
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-        git make gcc build-essential pkg-config automake libtool \
+        git wget unzip ca-certificates make gcc build-essential pkg-config automake libtool \
         libasound2-dev \
     && rm -rf /var/lib/apt/lists/*
 
