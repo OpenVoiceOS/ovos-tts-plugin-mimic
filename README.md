@@ -39,6 +39,23 @@ You can also specify the mimic binary location
         
 ```
 
+## Docker (ovos-tts-server)
+
+A container image runs the plugin as an
+[`ovos-tts-server`](https://github.com/OpenVoiceOS/ovos-tts-server) (ElevenLabs-compatible
+API), built and pushed to GHCR by CI on every push to `dev`/`master`. Mimic 1 is compiled
+from source inside the image with its bundled voices, so the container is fully offline:
+
+```bash
+docker run -p 9666:9666 ghcr.io/openvoiceos/ovos-tts-plugin-mimic:latest
+curl "http://localhost:9666/synthesize/hello%20world?lang=en-US" --output hello.wav
+```
+
+The served voice is baked in via the `MIMIC_VOICE` build arg (default `ap`, Alan Pope);
+`slt`, `kal`, `awb` and `rms` (en-US) are also compiled in. Rebuild to change it, e.g.
+`docker build --build-arg MIMIC_VOICE=slt -t mimic-tts .`. See the bundled
+`docker-compose.yml`.
+
 Mycroft premium subscribers have access to a female voice called trinity
 This voice is actually a pre compiled mimic binary with the voice included
 
