@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.0a1](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/tree/0.4.0a1) (2026-07-15)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/compare/0.3.3a3...0.4.0a1)
+
+**Merged pull requests:**
+
+- feat: serve mimic via ovos-tts-server docker image [\#38](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/pull/38) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.3.3a3](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/tree/0.3.3a3) (2026-06-17)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/compare/0.3.3a2...0.3.3a3)
