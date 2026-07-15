@@ -9,7 +9,7 @@ FROM python:3.11-slim AS mimic-builder
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
         git make gcc build-essential pkg-config automake libtool \
-        libasound2-dev libpcre3-dev \
+        libasound2-dev \
     && rm -rf /var/lib/apt/lists/*
 
 RUN git clone --depth 1 https://github.com/MycroftAI/mimic1 /tmp/mimic1 \
