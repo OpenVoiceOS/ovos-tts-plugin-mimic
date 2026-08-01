@@ -1,16 +1,68 @@
 # Changelog
 
-## [0.3.1a1](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/tree/0.3.1a1) (2025-06-08)
+## [0.4.0a2](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/tree/0.4.0a2) (2026-08-01)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/compare/V0.3.0...0.3.1a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/compare/0.4.0a1...0.4.0a2)
 
 **Merged pull requests:**
 
-- fix: compatibility with ovos-plugin-manager 1.X.X [\#16](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/pull/16) ([JarbasAl](https://github.com/JarbasAl))
+- docs: rewrite README in Simplified Technical English [\#45](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/pull/45) ([JarbasAl](https://github.com/JarbasAl))
 
-## [V0.3.0](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/tree/V0.3.0) (2024-09-11)
+## [0.4.0a1](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/tree/0.4.0a1) (2026-07-15)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/compare/0.3.0...V0.3.0)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/compare/0.3.3a3...0.4.0a1)
+
+**Merged pull requests:**
+
+- feat: serve mimic via ovos-tts-server docker image [\#38](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/pull/38) ([JarbasAl](https://github.com/JarbasAl))
+
+## [0.3.3a3](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/tree/0.3.3a3) (2026-06-17)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/compare/0.3.3a2...0.3.3a3)
+
+**Merged pull requests:**
+
+- test: add TTS intelligibility e2e \(ovoscope\) [\#31](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/pull/31) ([JarbasAl](https://github.com/JarbasAl))
+
+## [0.3.3a2](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/tree/0.3.3a2) (2026-06-16)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/compare/0.3.3a1...0.3.3a2)
+
+**Merged pull requests:**
+
+- chore: add missing shared CI workflows [\#30](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/pull/30) ([JarbasAl](https://github.com/JarbasAl))
+
+## [0.3.3a1](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/tree/0.3.3a1) (2026-04-03)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/compare/0.3.2a3...0.3.3a1)
+
+**Merged pull requests:**
+
+- fix\(i18n\): normalize locale folders to canonical BCP-47 [\#28](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/pull/28) ([JarbasAl](https://github.com/JarbasAl))
+
+## [0.3.2a3](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/tree/0.3.2a3) (2025-12-20)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/compare/0.3.2a2...0.3.2a3)
+
+**Merged pull requests:**
+
+- chore\(deps\): update dependency ovos-plugin-manager to v2 [\#25](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/pull/25) ([renovate[bot]](https://github.com/apps/renovate))
+
+## [0.3.2a2](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/tree/0.3.2a2) (2025-12-19)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/compare/0.3.2a1...0.3.2a2)
+
+**Merged pull requests:**
+
+- chore\(deps\): update dependency python to 3.14 [\#19](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/pull/19) ([renovate[bot]](https://github.com/apps/renovate))
+
+## [0.3.2a1](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/tree/0.3.2a1) (2025-12-18)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/compare/0.3.1...0.3.2a1)
+
+**Merged pull requests:**
+
+- chore: Configure Renovate [\#18](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/pull/18) ([renovate[bot]](https://github.com/apps/renovate))
 
 
 
