@@ -11,7 +11,14 @@ jobs:
     secrets: inherit
     with:
       python_versions: '["3.10", "3.11", "3.12", "3.13", "3.14"]'
-      install_extras: ''
-      # build/install verification only. The mimic unit tests need the `mimic`
-      # binary, which is not an apt package (it is a .deb from the
-      # mycroft-desktop repo), so they run in the dedicated unit_tests workflow.
+      install_extras: 'test'
+      test_path: 'test/unittests'
+      # The mimic unit tests run the `mimic` binary. It is not an apt package.
+      # Download the .deb, check its sha256, and stop on a mismatch.
+      pre_test_command: |
+        MIMIC_DEB_URL="https://forslund.github.io/mycroft-desktop-repo/pool/main/m/mimic/mimic_1.3.0.0_amd64.deb"
+        MIMIC_DEB_SHA256="7ca71652210ce6a5ed47311fdfb4836f080337840ed1e607b6a79505a4faf2f9"
+        curl -fsSL -o /tmp/mimic.deb "$MIMIC_DEB_URL"
+        echo "$MIMIC_DEB_SHA256  /tmp/mimic.deb" | sha256sum --check --strict || exit 1
+        sudo apt-get install -yq /tmp/mimic.deb
+        command -v mimic
