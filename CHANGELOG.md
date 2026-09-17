@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.0a3](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/tree/0.4.0a3) (2026-09-17)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/compare/0.4.0a2...0.4.0a3)
+
+**Merged pull requests:**
+
+- ci: use the shared coverage and unit-test workflows [\#47](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/pull/47) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.4.0a2](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/tree/0.4.0a2) (2026-08-01)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/compare/0.4.0a1...0.4.0a2)
