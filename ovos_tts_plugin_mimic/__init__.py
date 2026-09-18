@@ -13,8 +13,8 @@
 from os.path import join, isfile, expanduser
 
 import subprocess
-from distutils.spawn import find_executable
-from ovos_config.config import read_mycroft_config
+from shutil import which
+from ovos_config.config import Configuration
 from ovos_config.meta import get_xdg_base
 from ovos_plugin_manager.templates.g2p import Grapheme2PhonemePlugin, OutOfVocabulary
 from ovos_plugin_manager.templates.tts import TTS, TTSValidator
@@ -28,7 +28,7 @@ class MimicPhonemesPlugin(Grapheme2PhonemePlugin):
     def __init__(self, config=None):
         super().__init__(config)
         self.mimic_bin = expanduser(self.config.get("binary") or
-                                    find_executable("mimic") or
+                                    which("mimic") or
                                     "mimic")
 
     @staticmethod
@@ -87,7 +87,7 @@ class MimicTTSPlugin(TTS):
                                              audio_ext='wav')
         self.mimic_bin = self.config.get("binary") or \
                          self.find_premium_mimic() or \
-                         find_executable("mimic")
+                         which("mimic")
         self.voice = self.voice or "ap"
 
     @staticmethod
@@ -106,7 +106,7 @@ class MimicTTSPlugin(TTS):
 
         # mycroft style data_dir
         try:
-            config = read_mycroft_config() or {}
+            config = dict(Configuration()) or {}
             if config.get("data_dir"):
                 data_dir = expanduser(config['data_dir'])
                 mimic_bin = join(data_dir, 'voices', 'mimic_tn')

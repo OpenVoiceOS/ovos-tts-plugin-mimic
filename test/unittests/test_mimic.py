@@ -3,7 +3,7 @@
 These exercise the real `mimic` binary: they instantiate the plugin, locate
 the binary, synthesise audio to disk and assert a non-empty WAV plus
 well-formed phoneme output. The `mimic` binary must be installed and on PATH
-(the CI unit_tests workflow installs it from the mycroft-desktop .deb).
+(the CI coverage workflow installs it from the mycroft-desktop .deb).
 """
 import os
 import tempfile
