@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.4.1a2](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/tree/0.4.1a2) (2026-09-26)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/compare/0.4.1a1...0.4.1a2)
+
+**Merged pull requests:**
+
+- Update actions/setup-python action to v7 [\#44](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/pull/44) ([renovate[bot]](https://github.com/apps/renovate))
+- Update docker/build-push-action action to v7 [\#39](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/pull/39) ([renovate[bot]](https://github.com/apps/renovate))
+
 ## [0.4.1a1](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/tree/0.4.1a1) (2026-09-18)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic/compare/0.4.0a3...0.4.1a1)
