@@ -1,4 +1,0 @@
-recursive-include ovos_tts_plugin_mimic/ *
-recursive-include requirements/ *
-include CHANGELOG.md
-include LICENSE

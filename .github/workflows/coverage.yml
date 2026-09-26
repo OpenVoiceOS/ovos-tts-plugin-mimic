@@ -1,0 +1,28 @@
+name: Code Coverage
+
+on:
+  pull_request:
+    branches: [dev]
+  workflow_dispatch:
+
+jobs:
+  coverage:
+    uses: OpenVoiceOS/gh-automations/.github/workflows/coverage.yml@dev
+    secrets: inherit
+    with:
+      test_extras: 'test'
+      test_extras_fallback: ''
+      test_path: 'test/unittests'
+      coverage_source: 'ovos_tts_plugin_mimic'
+      # The mimic unit tests run the `mimic` binary. It is not an apt package.
+      # Download the .deb, check its sha256, and stop on a mismatch.
+      pre_test_command: |
+        # The runner's package index can be stale, and the .deb's dependency
+        # pcre2-utils then 404s from the mirror. Refresh the index first.
+        sudo apt-get update -q
+        MIMIC_DEB_URL="https://forslund.github.io/mycroft-desktop-repo/pool/main/m/mimic/mimic_1.3.0.0_amd64.deb"
+        MIMIC_DEB_SHA256="7ca71652210ce6a5ed47311fdfb4836f080337840ed1e607b6a79505a4faf2f9"
+        curl -fsSL -o /tmp/mimic.deb "$MIMIC_DEB_URL"
+        echo "$MIMIC_DEB_SHA256  /tmp/mimic.deb" | sha256sum --check --strict || exit 1
+        sudo apt-get install -yq /tmp/mimic.deb
+        command -v mimic
