@@ -5,7 +5,7 @@
 # other ovos-tts-server voices by pointing at a different port.
 
 # --- build stage: compile Mimic 1 from source ---
-FROM python:3.11-slim AS mimic-builder
+FROM python:3.14-slim AS mimic-builder
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
         git wget unzip ca-certificates make gcc build-essential pkg-config automake libtool \
@@ -21,7 +21,7 @@ RUN git clone --depth 1 https://github.com/MycroftAI/mimic1 /tmp/mimic1 \
     && make install
 
 # --- runtime stage ---
-FROM python:3.11-slim
+FROM python:3.14-slim
 
 # libasound2 is the only shared runtime lib Mimic links against.
 RUN apt-get update && apt-get install -y --no-install-recommends \
